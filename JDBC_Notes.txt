@@ -1,0 +1,45 @@
+JDBC:
+java Database connectivity:API=>application Programming Interface.(collection of class and interface)
+
+
+Java Application  ===>JDBCAPI and Driver ====>Database(mysql server)
+
+Types:
+========
+1.JDBCODBC Driver
+2.NativeApIpartlyDriver
+3.NetworkProtocolDriver
+4.thin driver
+===============================================
+
+Steps:
+======
+
+1.load the driver
+
+2.create the connection
+
+3.statement
+
+4.execute the query
+
+5.close the connection
+=====================================================
+Class.forName("com.mysql.jdbc.Driver");
+		Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/8657capgemini","root","root");
+       // PreparedStatement statement=con.prepareStatement("insert into empnew values(?,?)");
+       // PreparedStatement statement=con.prepareStatement("update empnew set ename=? where id=?");
+
+        PreparedStatement statement=con.prepareStatement("delete from empnew where id=?");
+
+
+
+============================================================================================
+
+Statement:create the table
+
+PreparedStatement:insert,update,delete,select
+
+excute:create
+executeUpdate:insert,update,delete
+executeQuery:select
